@@ -20,13 +20,13 @@ jobs:
     # Step 0: Detect project path dynamically
     - name: Set project path
       run: |
-        PROJECT_PATH=$(find /home -name 'TicketBooking' -type d 2>/dev/null | head -1)
+       PROJECT_PATH="$HOME/TicketBooking"
         if [ -z "$PROJECT_PATH" ]; then
           echo "❌ Error: Folder php-todo tidak ditemukan di /home"
           echo "Pastikan project sudah di-clone ke salah satu user directory"
           exit 1
         fi
-        echo "PROJECT_PATH=$PROJECT_PATH" >> $GITHUB_ENV
+        echo PROJECT_PATH="$HOME/TicketBooking" >>$GITHUB_ENV
         echo "✅ Found project at: $PROJECT_PATH"
         
     # Step 1: Ambil kode terbaru dari branch main
@@ -84,7 +84,7 @@ jobs:
     # Step 0: Detect project path dynamically
     - name: Set project path
       run: |
-        PROJECT_PATH=$(find /home -name 'TicketBooking' -type d 2>/dev/null | head -1)
+        PROJECT_PATH="$HOME/TicketBooking"
         if [ -z "$PROJECT_PATH" ]; then
           echo "❌ Error: Folder php-todo tidak ditemukan di /home"
           echo "Pastikan project sudah di-clone ke salah satu user directory"
