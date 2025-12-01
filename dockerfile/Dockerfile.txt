@@ -1,0 +1,11 @@
+# Menggunakan image Nginx sebagai base
+FROM nginx:alpine
+
+# Menyalin file konfigurasi Nginx ke dalam kontainer
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Menyalin semua file aplikasi web ke dalam direktori HTML default Nginx
+COPY . /usr/share/nginx/html
+
+# Expose port 80 untuk mengakses aplikasi
+EXPOSE 80

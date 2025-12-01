@@ -1,0 +1,13 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    # Direktori root untuk file statis
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    # Jika ada permintaan untuk URL, coba temukan file tersebut
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

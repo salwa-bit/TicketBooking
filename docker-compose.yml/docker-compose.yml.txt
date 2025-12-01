@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"  # Mapping port 8080 di host ke port 80 di kontainer
+    volumes:
+      - .:/usr/share/nginx/html  # Sinkronisasi file aplikasi dari host ke kontainer
+    networks:
+      - ticketbooking-network
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Password root untuk MySQL
+      MYSQL_DATABASE: ticketbooking  # Nama database yang dibuat
+    ports:
+      - "3306:3306"  # Menghubungkan MySQL di port 3306
+    networks:
+      - ticketbooking-network
+
+networks:
+  ticketbooking-network:
+    driver: bridge
