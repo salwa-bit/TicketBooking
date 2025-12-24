@@ -8,7 +8,7 @@ include('header.php');
 	<div class="wrap">
 		<div class="content-top">
 				<div class="listview_1_of_3 images_1_of_3">
-					<h2 style="color:#555;">Upcoming Movies</h2>
+					<h2 style="color:#555;">Welcome To Salwa Ticketing</h2>
 					<?php 
 					$qry3=mysqli_query($con,"SELECT * FROM tbl_news LIMIT 5");
 					
@@ -39,7 +39,7 @@ include('header.php');
 
 
 
-				
+
 			
 		</div>				
 		<div class="listview_1_of_3 images_1_of_3">
