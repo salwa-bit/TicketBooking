@@ -13,7 +13,7 @@
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="textcontact">
 						<p>Asisten Teater<br>
-						Online Movie Theatre Booking System<br>
+						SISTEM BOOKING<br>
 						Ph: 6969786969<br>
 						</p>
 					</div>
