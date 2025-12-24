@@ -28,7 +28,7 @@ date_default_timezone_set('Asia/Kathmandu');
 		</div>
 			  <div class="nav-wrap">
 					<ul class="group" id="example-one" >
-			           <li><a href="index.php" >Home</a></li>
+			           <li><a href="index.php" >Beranda</a></li>
 			  		   <li><a href="movies_events.php">Movies</a></li>
 			  		   <li><?php if(isset($_SESSION['user'])){
 			  		   $us=mysqli_query($con,"select * from tbl_registration where user_id='".$_SESSION['user']."'");
@@ -72,5 +72,5 @@ function myFunction() {
     }
     </script>
 
-	
+
 }
